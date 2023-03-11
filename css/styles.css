@@ -1,0 +1,45 @@
+header,
+footer {
+  background-color: #f2f2f2;
+}
+
+footer {
+  color: #000;
+}
+
+body {
+  color: #f2f2f2;
+  background-color: #32384f;
+}
+
+header a {
+  text-decoration: none;
+  color: #1d2540;
+}
+
+.search {
+  background-color: #1d2540;
+}
+
+.search a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.sale-price {
+  color: #fcff58;
+}
+
+.sale {
+  background-color: #fcff58;
+  color: #fff;
+}
+
+.old-price {
+  color: #c4c4c4;
+  text-decoration: line-through;
+}
+
+.cta {
+  background-color: #583c6f;
+}
