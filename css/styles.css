@@ -15,8 +15,12 @@ nav {
 
 body {
   color: #f2f2f2;
-  background-color: #32384f;
+
   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: #32384f;
 }
 
 .pricing {
@@ -53,4 +57,38 @@ header a {
 .cta {
   background-color: #583c6f;
   font-family: "Squada One";
+}
+
+.logo {
+  max-width: 140px;
+}
+
+.game-list img {
+  width: 284px;
+  height: 328px;
+  object-fit: cover;
+}
+
+.cover-top {
+  object-position: top;
+}
+
+.sell-games {
+  background-image: url(/images/gameboy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 53vh;
+  background-position-x: center;
+}
+
+.cta-search {
+  background-color: #6375ab;
+  font-family: "Squada One";
+}
+
+.trending img {
+  width: 370px;
+  height: 471px;
+  object-fit: cover;
+  padding: 10px;
 }
