@@ -3,8 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GameHub | Checkout</title>
+    <meta name="viewport" content="width=h, initial-scale=1.0" />
+    <meta name="description" content="The univers of Games" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans&family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2e065d1207.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>GameHub | The Universe of Games</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="/images/GameHub_Logo2.png" alt="GameHub logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Login</a></li>
+          <i class="fa-regular fa-cart-shopping"></i>
+          <li><img src="#" alt="shopping cart" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Checkout</h1>
+      <form method="POST">
+        <fieldset>
+          <legend>Shipping information:</legend>
+          <label for="first-name">First name:</label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            class="form-input"
+          />
+          <label for="last-name">Last name:</label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            class="form-input"
+          />
+          <label for="adress">Adress:</label>
+          <input type="text" name="adress" id="adress" class="form-input" />
+          <label for="postal-code">Postal code/city:</label>
+          <input
+            type="text"
+            name="postal-code"
+            id="postal-code"
+            class="form-input"
+          />
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" class="form-input" />
+        </fieldset>
+        <fieldset>
+          <legend>Payment information:</legend>
+          <p>Choose a payment option</p>
+          <input
+            type="radio"
+            id="visa-mastercard"
+            name="payment"
+            value="visa-mastercard"
+          />
+          <label for="visa-mastercard">Visa/Mastercard</label>
+          <input type="radio" id="vipps" name="payment" value="vipps" />
+          <label for="vipps">Vipps</label>
+          <input type="radio" id="paypal" name="payment" value="paypal" />
+          <label for="paypal">Paypal</label>
+          <label for="card-holder">Card holders name:</label>
+          <input
+            type="text"
+            name="card-holder"
+            id="card-holder"
+            class="form-input"
+          />
+          <label for="card-number">Card number:</label>
+          <input
+            type="number"
+            name="card-number"
+            id="card-number"
+            class="form-input"
+          />
+          <label for="expiration">Expiration mm/yy:</label>
+          <input
+            type="number"
+            name="expiration"
+            id="expiration"
+            class="form-input"
+          />
+          <label for="ccv">CCV/CVC:</label>
+          <input type="number" name="ccv" id="ccv" class="form-input" />
+        </fieldset>
+        <input type="submit" value="Confirm order" class="cta" />
+      </form>
+    </main>
+  </body>
 </html>

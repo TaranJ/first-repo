@@ -86,9 +86,16 @@ header a {
   font-family: "Squada One";
 }
 
+/* Store */
+
 .trending img {
   width: 370px;
   height: 471px;
   object-fit: cover;
   padding: 10px;
+}
+
+/* Checkout */
+.form-input {
+  display: block;
 }
