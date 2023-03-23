@@ -13,6 +13,18 @@ nav {
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 }
 
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: inline;
+}
+
+.login {
+  text-transform: lowercase;
+}
+
 body {
   color: #f2f2f2;
 
@@ -20,15 +32,18 @@ body {
 }
 
 main {
-  background-color: #32384f;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
 }
 
 .pricing {
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 }
+
 header a {
   text-decoration: none;
   color: #1d2540;
+  text-transform: uppercase;
 }
 
 .search {
