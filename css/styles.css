@@ -23,12 +23,14 @@ nav li {
 
 .login {
   text-transform: lowercase;
+  font-size: 1em;
 }
 
 body {
   color: #f2f2f2;
 
   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  margin: 0px;
 }
 
 main {
@@ -36,23 +38,59 @@ main {
   background-repeat: no-repeat;
 }
 
-.pricing {
-  font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
-}
-
 header a {
   text-decoration: none;
   color: #1d2540;
   text-transform: uppercase;
+  font-size: 1.4em;
+  padding: 20px;
 }
 
 .search {
   background-color: #1d2540;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 10px 200px 10px 600px;
 }
 
-.search a {
+.search a,
+.search-store a {
   color: #f2f2f2;
   text-decoration: none;
+  padding: 10px;
+}
+
+.cta {
+  background-color: #583c6f;
+  color: #f2f2f2;
+  font-family: "Squada One";
+  padding: 15px 60px;
+  border-radius: 10px;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 140px;
+}
+
+.cover-top {
+  object-position: top;
+}
+
+/* Home */
+
+.game-list img {
+  width: 284px;
+  height: 328px;
+  object-fit: cover;
+}
+
+.pricing {
+  font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 }
 
 .sale-price {
@@ -60,7 +98,7 @@ header a {
 }
 
 .sale {
-  background-color: #fcff58;
+  background-color: #fafb8e;
   color: #fff;
 }
 
@@ -69,45 +107,46 @@ header a {
   text-decoration: line-through;
 }
 
-.cta {
-  background-color: #583c6f;
-  font-family: "Squada One";
-}
-
-.logo {
-  max-width: 140px;
-}
-
-.game-list img {
-  width: 284px;
-  height: 328px;
-  object-fit: cover;
-}
-
-.cover-top {
-  object-position: top;
-}
-
 .sell-games {
   background-image: url(/images/gameboy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 53vh;
   background-position-x: center;
+  display: inline-block;
+  padding-left: 200px;
 }
 
-.cta-search {
-  background-color: #6375ab;
-  font-family: "Squada One";
+.sell-games h1 {
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 /* Store */
-
 .trending img {
   width: 370px;
   height: 471px;
   object-fit: cover;
   padding: 10px;
+}
+
+.search-store {
+  background-color: #1d2540;
+  padding: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 10px 100px 10px 300px;
+}
+
+.cta-search {
+  background-color: #6375ab;
+  font-family: "Squada One";
+  border-radius: 10px;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-decoration: none;
 }
 
 /* Checkout */
