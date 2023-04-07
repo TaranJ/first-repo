@@ -7,6 +7,7 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
+  max-height: 100px;
 }
 
 html,
@@ -27,7 +28,9 @@ nav {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.8em;
 }
 
 nav ul {
@@ -59,8 +62,8 @@ header a {
   text-decoration: none;
   color: #1d2540;
   text-transform: uppercase;
-  font-size: 1.4em;
-  padding: 20px;
+  font-size: 1.5em;
+  padding: 15px;
 }
 
 .search {
@@ -68,8 +71,10 @@ header a {
   border-radius: 5px;
   text-transform: uppercase;
   min-width: 30%;
-  margin-right: 300px;
-  float: right;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: auto auto 1fr;
+  margin: 0px 15% 0px 55%;
 }
 
 .search a,
@@ -82,6 +87,7 @@ header a {
 .search-list {
   display: flex;
   justify-content: space-around;
+  margin: 0px;
 }
 
 .search-input {
@@ -113,8 +119,9 @@ header a {
 }
 
 .logo {
-  max-width: 140px;
+  max-width: 130px;
   margin-right: 100px;
+  margin-left: -50px;
 }
 
 .cover-top {
@@ -132,29 +139,40 @@ header a {
   margin-left: 100px;
 }
 
+.cart {
+  padding: 0px;
+}
+
 /* Home */
 
 .game-list {
-  padding: 100px 0px;
+  padding: 80px 0px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  max-width: 1000px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1500px;
   margin: auto;
-  grid-gap: 0px 20px;
+  grid-gap: 0px 23px;
 }
 
-.game-list h1 {
+.game-list h1,
+.new-releases h1 {
   grid-column: -1/1;
 }
 
-.game-list img {
-  width: 284px;
-  height: 328px;
+.game-list img,
+.game-list a {
+  max-width: 100%;
   object-fit: cover;
+  grid-column: -1/1;
 }
 
 .pricing {
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px 10px;
+  font-size: 1.2em;
+  background-color: #32384f;
 }
 
 .sale-price {
@@ -162,13 +180,36 @@ header a {
 }
 
 .sale {
-  background-color: #fafb8e;
+  background-color: #fcff58;
   color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-shadow: rgb(27, 27, 27) 1px 0 10px;
+  margin: 0px;
 }
 
 .old-price {
   color: #c4c4c4;
   text-decoration: line-through;
+}
+
+.sale,
+old-price,
+sale-price {
+  max-height: 50px;
+}
+
+.new-releases {
+  padding: 80px 0px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1500px;
+  margin: auto;
+  grid-gap: 0px 23px;
+}
+
+.new-releases img {
+  max-width: 100%;
 }
 
 .sell-games {
