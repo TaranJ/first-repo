@@ -24,22 +24,24 @@ footer {
 
 .footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 footer .logo {
   max-width: 70px;
-  margin: 0px 20px;
-}
-
-footer img {
-  float: right;
+  margin: 0px;
 }
 
 .copyright {
   padding: 0px;
   line-height: 4pt;
+}
+
+.social-media {
+  align-self: flex-end;
+  padding-bottom: 5px;
 }
 
 h1,
@@ -57,10 +59,12 @@ h1 {
 
 nav ul {
   padding: 0px;
+  margin: 0px;
+  white-space: nowrap;
 }
 
 nav li {
-  display: inline;
+  display: inline-block;
 }
 
 .login {
@@ -150,7 +154,7 @@ header a {
 }
 
 header .logo {
-  margin-left: -50px;
+  margin-left: 50px;
 }
 
 .cover-top {
@@ -160,12 +164,7 @@ header .logo {
 .nav-right {
   float: right;
   margin-right: 20px;
-  margin-top: -10px;
-}
-
-.nav-main {
-  display: flex;
-  margin-left: 100px;
+  margin-top: 5px;
 }
 
 .cart {
@@ -173,24 +172,31 @@ header .logo {
 }
 
 /* Home */
-.game-list {
-  padding: 80px 0px;
+.game-list,
+.new-releases,
+.more-like-this {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  max-width: 1500px;
+  max-width: 1300px;
   margin: auto;
   grid-gap: 0px 23px;
 }
 
+.game-list {
+  padding: 80px 0px;
+}
+
 .game-list h1,
-.new-releases h1 {
+.new-releases h1,
+.more-like-this h1,
+.trending h1 {
   grid-column: -1/1;
 }
 
 .game-list img,
 .game-list a {
-  max-width: 100%;
-  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
   grid-column: -1/1;
 }
 
@@ -199,7 +205,7 @@ header .logo {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 0px 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   background-color: #32384f;
 }
 
@@ -214,6 +220,9 @@ header .logo {
   font-weight: bold;
   text-shadow: rgb(27, 27, 27) 1px 0 10px;
   margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .old-price {
@@ -223,11 +232,6 @@ header .logo {
 
 .new-releases {
   padding: 80px 0px 200px 0px;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  max-width: 1500px;
-  margin: auto;
-  grid-gap: 0px 23px;
 }
 
 .new-releases img {
@@ -247,13 +251,14 @@ header .logo {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  max-width: 1500px;
+  max-width: 1300px;
   margin: auto;
 }
 
 .sell-games .cta {
   max-width: 200px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .sell-games p {
@@ -271,10 +276,16 @@ header .logo {
 
 /* Store */
 .trending img {
-  width: 370px;
-  height: 471px;
-  object-fit: cover;
-  padding: 10px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1300px;
+  margin: auto;
+  grid-gap: 15px;
 }
 
 .search-store {
@@ -282,7 +293,7 @@ header .logo {
   padding: 20px;
   border-radius: 5px;
   text-transform: uppercase;
-  margin: 10px 100px 10px 300px;
+  margin: 0px 100px 10px 300px;
 }
 
 .cta-search {
@@ -293,6 +304,12 @@ header .logo {
   text-transform: uppercase;
   font-weight: lighter;
   text-decoration: none;
+}
+
+/* Product page */
+.more-like-this img {
+  width: 100%;
+  min-height: 100%;
 }
 
 /* Cart */
@@ -308,10 +325,49 @@ header .logo {
   display: block;
 }
 
+.checkout {
+  background-color: #d9d9d9;
+  color: #1d2540;
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Success */
+.order-summary,
+.order-complete {
+  background-color: #d9d9d9;
+  color: #000;
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px;
+}
+
+/*Mobile - will delete*/
+@media (max-width: 767px) {
+  .nav-right li {
+    display: none;
+  }
+}
+
 /* Tablet */
-@media {
+@media (min-width: 768px) and (max-width: 1039px) {
+  nav li {
+    font-size: 0.8em;
+  }
+
+  header .logo {
+    margin-right: 0px;
+    margin-left: 20px;
+  }
 }
 
 /*Desktop*/
-@media (min-width: px) {
+@media (min-width: 1040px) {
+}
+
+@media (max-width: 1240px) {
+  .pricing {
+    font-size: 0.8em;
+  }
 }

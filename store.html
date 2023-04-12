@@ -7,7 +7,10 @@
     <meta name="description" content="The univers of Games" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans&family=Squada+One&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans&family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/styles.css" rel="stylesheet" />
     <title>GameHub | Store</title>
   </head>
@@ -17,12 +20,19 @@
         <ul>
           <li><a href="#" class="cta-signup cta">Sign up</a></li>
           <li><a href="#" class="login">Login</a></li>
-          <a href="cart.html" class="cart"><img src="/images/cart.png" alt="shopping cart" /></a>
+          <a href="cart.html" class="cart"
+            ><img src="/images/cart.png" alt="shopping cart"
+          /></a>
         </ul>
       </nav>
       <nav class="nav-main">
         <ul>
-          <a href="index.html"><img src="/images/GameHub_Logo2.png" alt="GameHub logo" class="logo" /></a>
+          <a href="index.html"
+            ><img
+              src="/images/GameHub_Logo2.png"
+              alt="GameHub logo"
+              class="logo"
+          /></a>
           <li><a href="store.html">Store</a></li>
           <li><a href="#">Community</a></li>
           <li><a href="about.html">About</a></li>
@@ -34,21 +44,62 @@
     <main>
       <section class="search-store">
         <nav>
-          <a href="#">Search games</a></li>
+          <form method="POST">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="search-input"
+              placeholder="Search games"
+            />
+          </form>
           <a href="#" class="cta-search">Search</a>
         </nav>
       </section>
+      <section class="store-nav">
+        <h2>Browse by genre</h2>
+        <ul>
+          <li>Free to play</li>
+          <li>Action</li>
+          <li>Adventure</li>
+          <li>Indie</li>
+          <li>MMO</li>
+          <li>Racing</li>
+          <li>RPG</li>
+          <li>Simulation</li>
+          <li>Strategy</li>
+        </ul>
+        <h2>Browse by system</h2>
+        <ul>
+          <li>Windows</li>
+          <li>Mac</li>
+          <li>Nintendo Switch</li>
+          <li>Playstation 5</li>
+          <li>Playstation 4</li>
+          <li>Xbox Series S</li>
+          <li>Xbox Series X</li>
+          <li>Xbox One</li>
+          <li>More...</li>
+        </ul>
+      </section>
       <section class="trending">
         <h1>Trending</h1>
-        <img src="images/dragon_age_inquisition1.jpg" alt="Dragon Age: Inquisition" />
+        <a href="product.html"
+          ><img
+            src="/images/dragon_age_inquisition1.jpg"
+            alt="Dragon Age: Inquisition"
+        /></a>
         <img src="/images/hogwarts-legacy.webp" alt="Hogwarts Legacy" />
         <img src="images/TheLastofUsRemastered.jpg" alt="The Last of Us" />
         <img src="/images/returnal-front-cover.jpg" alt="Returnal" />
-        <img src="images/FFVIIRemake.png" alt="Final Fantasy VII" />
+        <img src="images/FFVIIRemake.jpg" alt="Final Fantasy VII" />
         <img src="/images/elden-ring.jpg" alt="Elden Ring" class="cover-top" />
         <img src="/images/Phasmophobia_cover.jpg" alt="Phasmophobia" />
         <img src="/images/Borderlands_3_cover_art.jpg" alt="Borderlands 3" />
-        <img src="images/call-of-duty-modern-warfare-2-.webp" alt="Call of Duty: Modern Warfare 2" />
+        <img
+          src="images/call-of-duty-modern-warfare-2-.webp"
+          alt="Call of Duty: Modern Warfare 2"
+        />
       </section>
     </main>
   </body>
@@ -60,11 +111,11 @@
         <p>&COPY;2023 GameHub. All rights reserved.</p>
         <p>About GameHub | Contact us | Refunds | Cookies</p>
       </div>
-    </div>
-    <div>
-      <img src="#" alt="Instagram" />
-      <img src="#" alt="Facebook" />
-      <img src="#" alt="Twitter" />
+      <div class="social-media">
+        <img src="/images/instagram.png" alt="Instagram" />
+        <img src="/images/facebook.png" alt="Facebook" />
+        <img src="/images/twitter.png" alt="Twitter" />
+      </div>
     </div>
   </footer>
 </html>
