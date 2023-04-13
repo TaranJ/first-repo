@@ -1,0 +1,189 @@
+/*Mobile*/
+@media (max-width: 767px) {
+  nav a {
+    font-size: 1em;
+    padding: 15px 5px;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .social-media {
+    display: none;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1039px) {
+  main {
+    background-repeat: no-repeat;
+  }
+
+  .nav-right {
+    display: inline;
+  }
+
+  nav li {
+    font-size: 0.8em;
+  }
+
+  header .logo {
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+
+  .mobile-logo {
+    padding: 15px;
+  }
+
+  .search a {
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .game-list,
+  .new-releases,
+  .more-like-this {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 30px;
+    grid-gap: 20px;
+  }
+
+  .game-list {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .pricing {
+    font-size: 0.9em;
+  }
+
+  .sell-games-text {
+    margin-left: 30px;
+  }
+
+  .sell-games p {
+    font-size: 1.1em;
+    line-height: 22pt;
+    max-width: 600px;
+    margin-left: 0px;
+  }
+
+  .sell-games h1 {
+    font-size: 3.5em;
+    letter-spacing: 4px;
+    margin: 20px 0px;
+  }
+
+  .sell-games .cta {
+    max-width: 200px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1040px) {
+  main {
+    background-repeat: no-repeat;
+  }
+
+  .nav-right {
+    display: inline;
+  }
+
+  .search-list {
+    margin: 0px 15% 0px 55%;
+  }
+
+  .search a {
+    display: block;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .game-list,
+  .new-releases,
+  .more-like-this {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: auto;
+    grid-gap: 0px 23px;
+  }
+
+  .game-list {
+    padding: 80px 0px;
+  }
+
+  .pricing {
+    font-size: 1em;
+  }
+
+  .game-list h1,
+  .new-releases h1 {
+    margin: 24px 0px;
+  }
+
+  .new-releases {
+    padding: 80px 0px 200px 0px;
+  }
+
+  .sell-games {
+    min-height: 53vh;
+  }
+
+  .sell-games-text {
+    padding-top: 80px;
+  }
+
+  .sell-games p {
+    font-size: 1.2em;
+    line-height: 25pt;
+    max-width: 800px;
+    padding-bottom: 50px;
+    margin-left: 0px;
+  }
+
+  .sell-games h1 {
+    font-size: 3.8em;
+    letter-spacing: 5px;
+    margin: 0px;
+  }
+
+  .sell-games .cta {
+    max-width: 200px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1240px) {
+  .pricing {
+    font-size: 0.8em;
+  }
+}

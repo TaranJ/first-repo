@@ -7,7 +7,8 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
-  max-height: 100px;
+  max-height: fit-content;
+  padding-bottom: 10px;
 }
 
 html,
@@ -23,10 +24,10 @@ footer {
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 0px;
 }
 
 footer .logo {
@@ -57,7 +58,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 nav ul {
@@ -84,7 +85,7 @@ body {
 
 main {
   background-image: url(../images/background.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 header a {
@@ -107,7 +108,7 @@ header a {
 }
 
 .search a {
-  display: block;
+  display: none;
 }
 
 .search-list {
@@ -119,7 +120,6 @@ header a {
   text-transform: uppercase;
   min-width: 30%;
   padding: 10px;
-  margin: 0px 15% 0px 55%;
 }
 
 .search-input {
@@ -160,6 +160,12 @@ header .logo {
   margin-left: 50px;
 }
 
+.mobile-logo {
+  grid-column: span 4;
+  justify-self: center;
+  padding: 5px 0px 10px 0px;
+}
+
 .cover-top {
   object-position: top;
 }
@@ -168,6 +174,7 @@ header .logo {
   float: right;
   margin-right: 20px;
   margin-top: 5px;
+  display: none;
 }
 
 .cart {
@@ -179,14 +186,20 @@ header .logo {
 .new-releases,
 .more-like-this {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   max-width: 1300px;
-  margin: auto;
-  grid-gap: 0px 23px;
+  margin: 30px;
+  grid-gap: 20px;
 }
 
 .game-list {
-  padding: 80px 0px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.game-list h1,
+.new-releases h1 {
+  margin: 0px;
 }
 
 .game-list h1,
@@ -234,7 +247,7 @@ header .logo {
 }
 
 .new-releases {
-  padding: 80px 0px 200px 0px;
+  padding: 40px 0px 80px 0px;
 }
 
 .new-releases img {
@@ -245,7 +258,6 @@ header .logo {
   background-image: url(/images/gameboy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 53vh;
   background-position-x: center;
 }
 
@@ -259,22 +271,24 @@ header .logo {
 }
 
 .sell-games .cta {
-  max-width: 200px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
 
 .sell-games p {
-  font-size: 1.2em;
-  line-height: 25pt;
-  max-width: 800px;
-  padding-bottom: 50px;
+  font-size: 0.9em;
+  line-height: 20pt;
+  max-width: 300px;
+  padding-bottom: 20px;
+  margin-left: 30px;
 }
 
 .sell-games h1 {
-  font-size: 3.8em;
+  font-size: 2.8em;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  margin: 20px 0px 20px 30px;
 }
 
 /* Store */
@@ -344,188 +358,4 @@ header .logo {
   max-width: 1300px;
   margin: auto;
   padding: 10px;
-}
-
-/*Mobile - will delete*/
-@media (max-width: 767px) {
-  header {
-    max-height: fit-content;
-    padding-bottom: 10px;
-  }
-
-  main {
-    background-repeat: repeat;
-  }
-
-  .nav-right {
-    display: none;
-  }
-
-  nav ul {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-  }
-
-  .mobile-logo {
-    grid-column: span 4;
-    justify-self: center;
-    padding: 5px 0px 10px 0px;
-  }
-
-  nav a {
-    font-size: 1em;
-    padding: 15px 5px;
-  }
-
-  .search a {
-    display: none;
-  }
-
-  .search-list {
-    margin: 0px;
-  }
-
-  h1 {
-    font-size: 1.6em;
-  }
-
-  .game-list,
-  .new-releases,
-  .more-like-this {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    margin: 30px;
-    grid-gap: 20px;
-  }
-
-  .game-list {
-    padding-top: 20px;
-    padding-bottom: 0px;
-  }
-
-  .pricing {
-    font-size: 1em;
-  }
-
-  .game-list h1,
-  .new-releases h1 {
-    margin: 0px;
-  }
-
-  .new-releases {
-    padding: 40px 0px 80px 0px;
-  }
-
-  .sell-games {
-    min-height: none;
-  }
-
-  .sell-games p {
-    font-size: 0.9em;
-    line-height: 20pt;
-    max-width: 300px;
-    padding-bottom: 20px;
-    margin-left: 30px;
-  }
-
-  .sell-games h1 {
-    font-size: 2.8em;
-    letter-spacing: 3px;
-    margin: 20px 0px;
-    margin-left: 30px;
-  }
-
-  .sell-games .cta {
-    max-width: none;
-    text-align: center;
-    margin-bottom: 0px;
-    border-radius: 0px;
-  }
-
-  .social-media {
-    display: none;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  }
-
-  .copyright {
-    font-size: 0.8em;
-  }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1039px) {
-  nav li {
-    font-size: 0.8em;
-  }
-
-  header .logo {
-    margin-right: 0px;
-    margin-left: 20px;
-  }
-
-  .search-list {
-    margin: 0px;
-  }
-
-  .game-list,
-  .new-releases,
-  .more-like-this {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin: 30px;
-    grid-gap: 20px;
-  }
-
-  .game-list {
-    padding-top: 40px;
-    padding-bottom: 0px;
-  }
-
-  .pricing {
-    font-size: 0.9em;
-  }
-
-  .game-list h1,
-  .new-releases h1 {
-    margin: 0px;
-  }
-
-  .new-releases {
-    padding: 40px 0px 80px 0px;
-  }
-
-  .sell-games {
-    min-height: none;
-  }
-
-  .sell-games-text {
-    margin-left: 30px;
-  }
-
-  .sell-games p {
-    font-size: 1.1em;
-    line-height: 22pt;
-    max-width: 600px;
-    padding-bottom: 20px;
-  }
-
-  .sell-games h1 {
-    font-size: 3.5em;
-    letter-spacing: 4px;
-    margin: 20px 0px;
-  }
-}
-
-/*Desktop*/
-@media (min-width: 1040px) {
-}
-
-@media (min-width: 1040px) and (max-width: 1240px) {
-  .pricing {
-    font-size: 0.8em;
-  }
 }
