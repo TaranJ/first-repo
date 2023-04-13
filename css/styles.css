@@ -8,7 +8,6 @@ header {
   top: 0px;
   width: 100%;
   max-height: fit-content;
-  padding-bottom: 10px;
 }
 
 html,
@@ -54,11 +53,20 @@ nav {
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 }
 
-h1 {
+h1,
+h2 {
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 500;
+}
+
+h1 {
+  letter-spacing: 2px;
   font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.3em;
+  letter-spacing: 1px;
 }
 
 nav ul {
@@ -181,10 +189,11 @@ header .logo {
   padding: 0px;
 }
 
-/* Home */
+/* --------------------------Home------------------------------ */
 .game-list,
 .new-releases,
-.more-like-this {
+.more-like-this,
+.trending {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   max-width: 1300px;
@@ -291,26 +300,20 @@ header .logo {
   margin: 20px 0px 20px 30px;
 }
 
-/* Store */
+/* --------------------------- Store --------------------------- */
 .trending img {
   width: 100%;
   min-height: 100%;
 }
 
-.trending {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1300px;
-  margin: auto;
-  grid-gap: 15px;
-}
-
 .search-store {
   background-color: #1d2540;
-  padding: 20px;
+  padding: 10px 0px 5px 0px;
   border-radius: 5px;
   text-transform: uppercase;
-  margin: 0px 100px 10px 300px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-column: 2;
 }
 
 .cta-search {
@@ -321,15 +324,41 @@ header .logo {
   text-transform: uppercase;
   font-weight: lighter;
   text-decoration: none;
+  display: none;
 }
 
-/* Product page */
+.store-nav {
+  background-color: #32384f;
+  float: left;
+  padding: 20px 20px 0px 40px;
+  grid-row: 1 / span 2;
+}
+
+.store-nav li {
+  display: block;
+  color: #b9cafd;
+}
+
+.store-nav ul {
+  padding: 0px;
+  margin-bottom: 100px;
+}
+
+.search-store img {
+  padding-left: 2.5%;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+/*--------------------------- Product page ---------------------------*/
 .more-like-this img {
   width: 100%;
   min-height: 100%;
 }
 
-/* Cart */
+/* ---------------------------Cart--------------------------- */
 .shopping-cart {
   background-color: #d9d9d9;
   color: #1d2540;
@@ -337,7 +366,7 @@ header .logo {
   padding: 20px;
 }
 
-/* Checkout */
+/* ---------------------------Checkout--------------------------- */
 .form-input {
   display: block;
 }
@@ -350,7 +379,7 @@ header .logo {
   padding: 10px;
 }
 
-/* Success */
+/* ---------------------------Success--------------------------- */
 .order-summary,
 .order-complete {
   background-color: #d9d9d9;
