@@ -31,6 +31,10 @@
   #menu-checkbox:checked ~ .store-nav {
     display: block;
   }
+
+  .more-like-this {
+    display: none;
+  }
 }
 
 /*-------------------------Tablet-------------------------------*/
@@ -83,6 +87,7 @@
     grid-gap: 20px;
   }
 
+  /* HOME */
   .game-list {
     padding-top: 40px;
     padding-bottom: 0px;
@@ -147,6 +152,10 @@
 
   #menu-checkbox,
   .search-store img {
+    display: none;
+  }
+
+  .more-like-this {
     display: none;
   }
 }

@@ -353,6 +353,40 @@ header .logo {
 }
 
 /*--------------------------- Product page ---------------------------*/
+.product img {
+  max-width: 100%;
+}
+
+.product h1 {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+.product-photo {
+  margin: 20px 30px;
+}
+
+.product-description {
+  background-color: #32384f;
+  padding: 10px 25px 50px 25px;
+}
+
+.da-description {
+  line-height: 19pt;
+  margin: 10px;
+}
+
+.product-price {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.product-images img {
+  width: 100%;
+}
+
 .more-like-this img {
   width: 100%;
   min-height: 100%;
