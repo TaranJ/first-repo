@@ -23,8 +23,8 @@ footer {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr auto;
   align-items: center;
   gap: 30px;
 }
@@ -32,16 +32,19 @@ footer {
 footer .logo {
   max-width: 70px;
   margin: 0px;
+  grid-column: 3;
 }
 
 .copyright {
   padding: 0px;
   line-height: 4pt;
+  grid-column: 4;
 }
 
 .social-media {
   align-self: flex-end;
   padding-bottom: 5px;
+  grid-column: 7;
 }
 
 h1,
@@ -92,22 +95,15 @@ header a {
   padding: 15px;
 }
 
-.search {
-  background-color: #1d2540;
-  border-radius: 5px;
-  text-transform: uppercase;
-  min-width: 30%;
-  display: grid;
-  padding: 10px;
-  grid-template-columns: auto auto 1fr;
-  margin: 0px 15% 0px 55%;
+.search li {
+  align-self: center;
 }
 
 .search a,
 .search-store a {
   color: #f2f2f2;
   text-decoration: none;
-  padding: 10px;
+  padding: 0px 5px;
 }
 
 .search a {
@@ -115,16 +111,23 @@ header a {
 }
 
 .search-list {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   margin: 0px;
+  background-color: #1d2540;
+  border-radius: 5px;
+  text-transform: uppercase;
+  min-width: 30%;
+  padding: 10px;
+  margin: 0px 15% 0px 55%;
 }
 
 .search-input {
   border-radius: 8px;
-  padding: 15px;
+  padding: 15px 0px;
   text-transform: uppercase;
-  min-width: 300px;
+  width: 95%;
+  justify-self: center;
 }
 
 .cta {
@@ -345,8 +348,112 @@ header .logo {
 
 /*Mobile - will delete*/
 @media (max-width: 767px) {
+  header {
+    max-height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  main {
+    background-repeat: repeat;
+  }
+
   .nav-right li {
     display: none;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .mobile-logo {
+    grid-column: span 4;
+    justify-self: center;
+    padding: 5px 0px 10px 0px;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 15px 5px;
+  }
+
+  .search a {
+    display: none;
+  }
+
+  .search-list {
+    margin: 0px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .game-list,
+  .new-releases,
+  .more-like-this {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 30px;
+    grid-gap: 20px;
+  }
+
+  .game-list {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .pricing {
+    font-size: 1em;
+  }
+
+  .game-list h1,
+  .new-releases h1 {
+    margin: 0px;
+  }
+
+  .new-releases {
+    padding: 40px 0px 80px 0px;
+  }
+
+  .sell-games {
+    min-height: none;
+  }
+
+  .sell-games p {
+    font-size: 0.9em;
+    line-height: 20pt;
+    max-width: 300px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+  }
+
+  .sell-games h1 {
+    font-size: 2.8em;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    margin-left: 30px;
+  }
+
+  .sell-games .cta {
+    max-width: none;
+    text-align: center;
+    margin-bottom: 0px;
+    border-radius: 0px;
+  }
+
+  .social-media {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .copyright {
+    font-size: 0.8em;
   }
 }
 
@@ -360,13 +467,64 @@ header .logo {
     margin-right: 0px;
     margin-left: 20px;
   }
+
+  .search-list {
+    margin: 0px;
+  }
+
+  .game-list,
+  .new-releases,
+  .more-like-this {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 30px;
+    grid-gap: 20px;
+  }
+
+  .game-list {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .pricing {
+    font-size: 0.9em;
+  }
+
+  .game-list h1,
+  .new-releases h1 {
+    margin: 0px;
+  }
+
+  .new-releases {
+    padding: 40px 0px 80px 0px;
+  }
+
+  .sell-games {
+    min-height: none;
+  }
+
+  .sell-games-text {
+    margin-left: 30px;
+  }
+
+  .sell-games p {
+    font-size: 1.1em;
+    line-height: 22pt;
+    max-width: 600px;
+    padding-bottom: 20px;
+  }
+
+  .sell-games h1 {
+    font-size: 3.5em;
+    letter-spacing: 4px;
+    margin: 20px 0px;
+  }
 }
 
 /*Desktop*/
 @media (min-width: 1040px) {
 }
 
-@media (max-width: 1240px) {
+@media (min-width: 1040px) and (max-width: 1240px) {
   .pricing {
     font-size: 0.8em;
   }
