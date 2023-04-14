@@ -45,7 +45,7 @@
       <section class="checkout">
         <h1>Checkout</h1>
         <form method="POST">
-          <fieldset>
+          <fieldset class="shipping">
             <legend>Shipping information:</legend>
             <label for="first-name">First name:</label>
             <input
@@ -75,18 +75,21 @@
           </fieldset>
           <fieldset>
             <legend>Payment information:</legend>
-            <p>Choose a payment option</p>
-            <input
-              type="radio"
-              id="visa-mastercard"
-              name="payment"
-              value="visa-mastercard"
-            />
-            <label for="visa-mastercard">Visa/Mastercard</label>
-            <input type="radio" id="vipps" name="payment" value="vipps" />
-            <label for="vipps">Vipps</label>
-            <input type="radio" id="paypal" name="payment" value="paypal" />
-            <label for="paypal">Paypal</label>
+            <div class="payment-option">
+              <p>Choose a payment option</p>
+
+              <input
+                type="radio"
+                id="visa-mastercard"
+                name="payment"
+                value="visa-mastercard"
+              />
+              <label for="visa-mastercard">Visa/Mastercard</label>
+              <input type="radio" id="vipps" name="payment" value="vipps" />
+              <label for="vipps">Vipps</label>
+              <input type="radio" id="paypal" name="payment" value="paypal" />
+              <label for="paypal">Paypal</label>
+            </div>
             <label for="card-holder">Card holders name:</label>
             <input
               type="text"
@@ -101,15 +104,21 @@
               id="card-number"
               class="form-input"
             />
-            <label for="expiration">Expiration mm/yy:</label>
-            <input
-              type="number"
-              name="expiration"
-              id="expiration"
-              class="form-input"
-            />
-            <label for="ccv">CCV/CVC:</label>
-            <input type="number" name="ccv" id="ccv" class="form-input" />
+            <div class="card-info">
+              <div>
+                <label for="expiration">Expiration mm/yy:</label>
+                <input
+                  type="number"
+                  name="expiration"
+                  id="expiration"
+                  class="form-input"
+                />
+              </div>
+              <div>
+                <label for="ccv">CCV/CVC:</label>
+                <input type="number" name="ccv" id="ccv" class="form-input" />
+              </div>
+            </div>
           </fieldset>
           <a href="success.html" class="cta cta-confirm-big">Confirm Order</a>
         </form>
@@ -118,8 +127,10 @@
             src="/images/dragon_age_inquisition1.jpg"
             alt="Cover of Dragon Age: Inquisition"
           />
-          <p>Dragon Age: Inquisition</p>
-          <p>199,50 NOK</p>
+          <div class="order-info">
+            <p>Dragon Age: Inquisition</p>
+            <p>199,50 NOK</p>
+          </div>
           <table>
             <tr>
               <th>Order:</th>
@@ -129,11 +140,12 @@
               <th>Shipping:</th>
               <td>N/A</td>
             </tr>
-            <tr>
+            <tr class="total-price">
               <th>Total:</th>
               <td>199,50 NOK</td>
             </tr>
           </table>
+          <a href="cart.html" class="checkout-back-big">Edit cart</a>
         </div>
         <a href="cart.html" class="checkout-back">Edit cart</a>
         <a href="success.html" class="cta cta-confirm-small">Confirm Order</a>

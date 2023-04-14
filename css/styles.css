@@ -551,8 +551,59 @@ header .logo {
 
 .checkout form {
   margin-bottom: 50px;
-  margin: 30px 0px;
   padding: 10px 20px;
+}
+
+.checkout fieldset {
+  border: none;
+  padding-block-start: 20px;
+  padding-inline-start: 0px;
+}
+
+.shipping {
+  margin-bottom: 50px;
+}
+
+.checkout legend {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.checkout label {
+  margin-left: 10px;
+}
+
+.checkout input {
+  width: 100%;
+  height: 25px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  accent-color: #583c6f;
+}
+
+.payment-option {
+  display: grid;
+  grid-template-columns: 40px auto;
+  margin-bottom: 30px;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.payment-option label {
+  text-transform: uppercase;
+}
+
+.payment-option p {
+  grid-column: -1/1;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
 }
 
 .order {
@@ -561,14 +612,43 @@ header .logo {
   width: 100%;
   margin-bottom: 5px;
   justify-self: center;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .order img {
   max-width: 130px;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
-.cta-confirm-small {
+.order table {
+  grid-column: span 2;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0px 20px;
+}
+
+.order td {
+  text-align: right;
+}
+
+.order-info {
+  align-self: center;
+  padding: 0px 20px;
+  font-weight: 600;
+}
+
+.order-info p {
+  margin: 0px;
+}
+
+.total-price {
+  font-weight: 600;
+  color: #583c6f;
+}
+
+.cta-confirm-small,
+.cta-confirm-big {
   font-size: 2em;
   text-align: center;
   border: solid 1px #000;
@@ -577,8 +657,14 @@ header .logo {
   padding: 15px 30px;
 }
 
-.checkout-back {
+.checkout-back,
+.checkout-back-big {
   margin-bottom: 30px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
 }
 
 /* ---------------------------Success--------------------------- */
