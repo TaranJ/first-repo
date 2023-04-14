@@ -189,6 +189,11 @@ header .logo {
   padding: 0px;
 }
 
+.product-html main,
+.store-html main {
+  padding-bottom: 30px;
+}
+
 /* --------------------------Home------------------------------ */
 .game-list,
 .new-releases,
@@ -306,6 +311,10 @@ header .logo {
   min-height: 100%;
 }
 
+.trending {
+  margin: 30px 30px 0px 30px;
+}
+
 .search-store {
   background-color: #1d2540;
   padding: 10px 0px 5px 0px;
@@ -353,13 +362,9 @@ header .logo {
 }
 
 /*--------------------------- Product page ---------------------------*/
+
 .product img {
   max-width: 100%;
-}
-
-.product h1 {
-  font-size: 1.3em;
-  letter-spacing: 1px;
 }
 
 .product-photo {
@@ -369,6 +374,7 @@ header .logo {
 .product-description {
   background-color: #32384f;
   padding: 10px 25px 50px 25px;
+  margin-bottom: 30px;
 }
 
 .da-description {
@@ -380,11 +386,69 @@ header .logo {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  gap: 10px;
+  gap: 15px;
+  justify-content: start;
+}
+
+.product-price .sale {
+  justify-self: start;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.product-price .old-price,
+.product-price .sale-price {
+  place-self: end;
+  margin: 0px;
+}
+
+.product-price .sale-price {
+  font-size: 1.2em;
+}
+
+.product-price .cta {
+  grid-column: span 2;
+  padding: 15px 40px;
+  font-size: 1.5em;
+  text-align: center;
+  border: solid 1px #000;
+}
+
+.product-images {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow-x: scroll;
+  margin-bottom: 30px;
 }
 
 .product-images img {
   width: 100%;
+}
+
+.details {
+  background-color: #32384f;
+  padding: 10px 25px 50px 25px;
+  text-align: left;
+  display: grid;
+  gap: 40px;
+}
+
+.details th {
+  color: #a1adce;
+  font-weight: 100;
+}
+
+.mostly-positive {
+  color: #8eabff;
+}
+
+.system-requirements h1 {
+  margin-bottom: 0px;
+}
+
+.system-subheading {
+  margin-top: 0px;
+  font-size: 0.8em;
 }
 
 .more-like-this img {
