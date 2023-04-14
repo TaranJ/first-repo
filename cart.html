@@ -15,7 +15,7 @@
     <link href="css/media.css" rel="stylesheet" />
     <title>GameHub | Shopping Cart</title>
   </head>
-  <body>
+  <body class="cart-html">
     <header>
       <nav class="nav-right">
         <ul>
@@ -48,13 +48,15 @@
           src="/images/dragon_age_inquisition1.jpg"
           alt="Cover of Dragon Age: Inquisition"
         />
-        <p>Dragon Age: Inquisition</p>
-        <p>199,50 NOK</p>
-        <p>Remove</p>
+        <p class="cart-title">Dragon Age: Inquisition</p>
+        <div class="cart-price">
+          <p>199,50 NOK</p>
+          <p class="cart-remove">Remove</p>
+        </div>
         <h2>Estimated Total</h2>
-        <p>199,50 NOK</p>
-        <a href="store.html">Continue shopping</a>
-        <a href="checkout.html" class="cta">Checkout</a>
+        <p class="cart-total-price">199,50 NOK</p>
+        <a href="store.html" class="cart-back">Continue shopping</a>
+        <a href="checkout.html" class="cta cta-checkout">Checkout</a>
       </section>
     </main>
     <footer>
