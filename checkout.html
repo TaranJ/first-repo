@@ -15,7 +15,7 @@
     <link href="css/media.css" rel="stylesheet" />
     <title>GameHub | Checkout</title>
   </head>
-  <body>
+  <body class="checkout-html">
     <header>
       <nav class="nav-right">
         <ul>
@@ -111,8 +111,32 @@
             <label for="ccv">CCV/CVC:</label>
             <input type="number" name="ccv" id="ccv" class="form-input" />
           </fieldset>
-          <a href="success.html" class="cta">Confirm Order</a>
+          <a href="success.html" class="cta cta-confirm-big">Confirm Order</a>
         </form>
+        <div class="order">
+          <img
+            src="/images/dragon_age_inquisition1.jpg"
+            alt="Cover of Dragon Age: Inquisition"
+          />
+          <p>Dragon Age: Inquisition</p>
+          <p>199,50 NOK</p>
+          <table>
+            <tr>
+              <th>Order:</th>
+              <td>199,50 NOK</td>
+            </tr>
+            <tr>
+              <th>Shipping:</th>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>Total:</th>
+              <td>199,50 NOK</td>
+            </tr>
+          </table>
+        </div>
+        <a href="cart.html" class="checkout-back">Edit cart</a>
+        <a href="success.html" class="cta cta-confirm-small">Confirm Order</a>
       </section>
     </main>
     <footer>
