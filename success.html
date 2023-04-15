@@ -15,7 +15,7 @@
     <link href="css/media.css" rel="stylesheet" />
     <title>GameHub | Order Complete</title>
   </head>
-  <body>
+  <body class="success-html">
     <header>
       <nav class="nav-right">
         <ul>
@@ -29,10 +29,7 @@
       <nav class="nav-main">
         <ul>
           <a href="index.html" class="mobile-logo"
-            ><img
-              src="/images/GameHub_Logo2.png"
-              alt="GameHub logo"
-              class="logo"
+            ><img src="/images/GameHub_Logo2.png" alt="Home page" class="logo"
           /></a>
           <li><a href="store.html">Store</a></li>
           <li><a href="#">Community</a></li>
@@ -47,16 +44,13 @@
           <ul class="search-list">
             <li><a href="#">Categories</a></li>
             <li><a href="#">News</a></li>
-
-            <form method="POST">
-              <input
-                type="text"
-                name="search"
-                id="search"
-                class="search-input"
-                placeholder="Search games"
-              />
-            </form>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="search-input"
+              placeholder="Search games"
+            />
           </ul>
         </nav>
       </section>
@@ -66,6 +60,7 @@
           Thank you for shopping with us! We have sent you an email confirming
           your order.
         </p>
+        <img src="/images/success-circle.png" />
       </section>
       <section class="order-summary">
         <h1>Order summary</h1>
@@ -73,19 +68,23 @@
           src="/images/dragon_age_inquisition1.jpg"
           alt="Cover of Dragon Age: Inquisition"
         />
-        <p>Dragon Age: Inquisition</p>
-        <p>199,50 NOK</p>
-        <ul>
-          <li>Order:</li>
-          <li>Shipping:</li>
-          <li>Total:</li>
-        </ul>
-        <ul>
-          <li>199,50 NOK</li>
-          <li>N/A</li>
-          <li>199,50 NOK</li>
-        </ul>
-        <a href="store.html">Back to store</a>
+        <p class="cart-title">Dragon Age: Inquisition</p>
+        <p class="cart-price">199,50 NOK</p>
+        <table>
+          <tr>
+            <th>Order:</th>
+            <td>199,50 NOK</td>
+          </tr>
+          <tr>
+            <th>Shipping:</th>
+            <td>N/A</td>
+          </tr>
+          <tr class="total-price">
+            <th>Total:</th>
+            <td>199,50 NOK</td>
+          </tr>
+        </table>
+        <a href="store.html" class="cart-back">Back to store</a>
       </section>
     </main>
     <footer>

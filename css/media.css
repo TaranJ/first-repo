@@ -39,7 +39,8 @@
   .product h1,
   .details h1,
   .cart-html h1,
-  .checkout h1 {
+  .checkout h1,
+  .success-html h1 {
     font-size: 1.3em;
     letter-spacing: 1px;
   }
@@ -282,6 +283,54 @@
   .cta-confirm-big,
   .checkout-back-big {
     display: none;
+  }
+
+  /* SUCCESS */
+  .order-complete {
+    grid-template-columns: auto auto;
+    max-width: 700px;
+  }
+
+  .order-complete h1 {
+    margin: 15px 0px;
+  }
+
+  .order-complete p {
+    grid-row: 2;
+  }
+
+  .order-complete img {
+    grid-row: span 2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .order-summary .cart-title,
+  .order-summary .cart-price {
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .order-summary {
+    max-width: 600px;
+    padding: 15px 50px;
+  }
+
+  .order-summary h1 {
+    grid-column: span 3;
+  }
+
+  .order-summary img {
+    grid-area: 2/1;
+  }
+
+  .order-summary table {
+    grid-area: 3/3;
+  }
+
+  .order-summary .cart-back {
+    font-size: 0.9em;
+    padding-bottom: 15px;
   }
 }
 
@@ -573,6 +622,48 @@
 
   .cta-confirm-small {
     display: none;
+  }
+
+  /* SUCCESS */
+  .order-complete {
+    grid-template-columns: auto auto;
+    max-width: 1200px;
+  }
+
+  .order-complete h1 {
+    margin: 15px 0px;
+  }
+
+  .order-complete p {
+    grid-row: 2;
+  }
+
+  .order-complete img {
+    grid-row: span 2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .order-summary {
+    max-width: 1000px;
+    padding: 15px 50px;
+  }
+
+  .order-summary h1 {
+    grid-column: span 3;
+  }
+
+  .order-summary img {
+    grid-area: 2/1;
+  }
+
+  .order-summary table {
+    grid-area: 3/3;
+  }
+
+  .order-summary .cart-back {
+    font-size: 0.9em;
+    padding-bottom: 15px;
   }
 }
 

@@ -469,10 +469,14 @@ header .logo {
 
 /* ---------------------------Cart--------------------------- */
 
-.cart-html h1 {
-  font-weight: 600;
+.cart-html h1,
+.order-summary h1 {
   border-bottom: solid 1px #000;
   grid-column: span 2;
+}
+
+.cart-html h1 {
+  font-weight: 600;
 }
 
 .shopping-cart {
@@ -543,9 +547,13 @@ header .logo {
   display: grid;
 }
 
-.checkout h1 {
+.checkout h1,
+.order-complete h1 {
   color: #583c6f;
   font-weight: 600;
+}
+
+.checkout h1 {
   margin-left: 20px;
 }
 
@@ -571,6 +579,7 @@ header .logo {
 
 .checkout label {
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 .checkout input {
@@ -621,7 +630,8 @@ header .logo {
   margin-bottom: 20px;
 }
 
-.order table {
+.order table,
+.order-summary table {
   grid-column: span 2;
   margin-top: 20px;
   text-align: left;
@@ -668,11 +678,55 @@ header .logo {
 }
 
 /* ---------------------------Success--------------------------- */
+.success-html main {
+  padding-bottom: 10px;
+}
+
 .order-summary,
 .order-complete {
   background-color: #d9d9d9;
   color: #000;
-  max-width: 1300px;
-  margin: auto;
-  padding: 10px;
+  margin: 40px auto;
+  display: grid;
+}
+
+.order-complete {
+  justify-items: left;
+  text-align: left;
+  padding: 15px 40px;
+}
+
+.order-complete img {
+  justify-self: center;
+}
+
+.order-complete p {
+  margin-top: 0px;
+  line-height: 18pt;
+}
+
+.order-summary {
+  padding: 15px 20px;
+}
+
+.order-summary img {
+  max-width: 130px;
+  grid-column: span 2;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+
+.order-summary .cart-price,
+.order-summary table {
+  text-align: right;
+  padding: 0px;
+}
+
+.order-summary th {
+  text-align: left;
+  padding-left: 100px;
+}
+
+.order-summary .cart-back {
+  margin-top: 20px;
 }
