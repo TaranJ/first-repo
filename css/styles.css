@@ -804,3 +804,35 @@ header .logo {
 .contact-social-media p {
   margin: 5px;
 }
+
+/* --------------------------- About --------------------------- */
+.about-img {
+  background-image: url(/images/fantasy-landscape.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 60%;
+  background-position-y: center;
+}
+
+.about {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.about-info {
+  padding: 20px 40px 40px 40px;
+}
+
+.about-info h1 {
+  font-weight: 600;
+}
+
+.about-info-p {
+  margin-bottom: 50px;
+}
+
+.about-info .cta {
+  background-color: #6375ab;
+  padding: 10px 30px;
+  font-size: 2em;
+  border: solid 1px #000;
+}
