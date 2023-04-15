@@ -354,6 +354,7 @@
 
   .support-img {
     grid-row: 3;
+    min-height: 40vh;
   }
 
   /* ABOUT */
@@ -727,7 +728,7 @@
 
   .support-img {
     grid-area: 1/1;
-    max-width: 800px;
+    min-height: 50vh;
   }
 
   .contact-info {

@@ -764,8 +764,12 @@ header .logo {
   margin-top: 10px;
 }
 
-.support-img img {
-  width: 100%;
+.support-img {
+  background-image: url(/images/keyboard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 90%;
+  min-height: 25vh;
 }
 
 .contact-info {
