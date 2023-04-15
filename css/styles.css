@@ -75,6 +75,11 @@ h2 {
   letter-spacing: 1px;
 }
 
+h3 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
 nav ul {
   padding: 0px;
   margin: 0px;
@@ -729,4 +734,73 @@ header .logo {
 
 .order-summary .cart-back {
   margin-top: 20px;
+}
+
+/* --------------------------Contact------------------------------ */
+.contact-html main {
+  background-color: #1d2540;
+  background-image: none;
+}
+
+.contact-html h1 {
+  margin: 0px;
+  font-weight: 600;
+}
+
+.support {
+  background-image: url(../images/background-grey.png);
+  background-repeat: no-repeat;
+  display: grid;
+  padding: 40px;
+  gap: 10px;
+}
+
+.support .cta {
+  padding: 10px 30px;
+  font-size: 1.5em;
+  text-align: center;
+  border: solid 1px #000;
+  justify-self: start;
+  margin-top: 10px;
+}
+
+.support-img img {
+  width: 100%;
+}
+
+.contact-info {
+  background-image: url(../images/background-dark.png);
+  background-repeat: no-repeat;
+  padding: 40px;
+  display: grid;
+  gap: 30px;
+}
+
+.contact-info h2 {
+  margin-bottom: 0px;
+}
+
+.contact-info p {
+  margin-top: 0px;
+}
+
+.contact-info h3 {
+  margin-bottom: 0px;
+}
+
+.contact-info th {
+  font-weight: 400;
+  text-align: left;
+  padding-right: 30px;
+}
+
+.contact-social-media {
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: minmax(30px, 50px) auto;
+  align-items: center;
+}
+
+.contact-social-media p {
+  margin: 5px;
 }
