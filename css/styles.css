@@ -104,7 +104,6 @@ body {
 
 main {
   background-image: url(../images/background.png);
-  background-repeat: repeat;
 }
 
 header a {
@@ -790,8 +789,8 @@ header .logo {
 
 .support {
   background-image: url(../images/background-grey.png);
-  background-repeat: no-repeat;
   display: grid;
+  background-size: cover;
   padding: 40px;
   gap: 10px;
 }
@@ -815,7 +814,7 @@ header .logo {
 
 .contact-info {
   background-image: url(../images/background-dark.png);
-  background-repeat: no-repeat;
+  background-size: cover;
   padding: 40px;
   display: grid;
   gap: 30px;
