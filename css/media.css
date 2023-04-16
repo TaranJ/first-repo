@@ -21,7 +21,8 @@
   .more-like-this,
   .cart-remove,
   .cta-confirm-big,
-  .checkout-back-big {
+  .checkout-back-big,
+  .arrow {
     display: none;
   }
 
@@ -42,6 +43,25 @@
   .about-info h1 {
     font-size: 1.3em;
     letter-spacing: 1px;
+  }
+
+  .index-html main,
+  .store-html main {
+    background-image: none;
+    background: radial-gradient(
+      circle,
+      rgba(50, 56, 79, 1) 0%,
+      rgba(98, 109, 148, 1) 100%
+    );
+  }
+
+  .game-list,
+  .new-releases {
+    max-width: 500px;
+  }
+
+  .new-releases {
+    padding: 30px 0px;
   }
 
   .cart-html h2 {
@@ -149,6 +169,13 @@
     border-radius: 10px;
   }
 
+  .view-more {
+    background-color: #000;
+    opacity: 0.4;
+    font-size: 1.5em;
+    border: none;
+  }
+
   /* STORE */
   .store-html main {
     padding-bottom: 0px;
@@ -178,8 +205,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 1200px;
     margin: auto;
-    grid-gap: 35px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
   .search-store {
@@ -196,11 +222,13 @@
   .more-like-this,
   .cart-remove,
   .cta-confirm-big,
-  .checkout-back-big {
+  .checkout-back-big,
+  .cod,
+  .arrow {
     display: none;
   }
 
-  /* STORE */
+  /* PRODUCT PAGE */
   .product {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -270,13 +298,13 @@
     margin: 30px auto;
   }
 
-  /* Cart */
+  /* CART */
   .shopping-cart {
     padding: 20px 80px 60px 80px;
     margin: 30px 50px;
   }
 
-  /* Checkout */
+  /* CHECKOUT */
   .checkout {
     max-width: 600px;
     margin: 30px auto;
@@ -389,10 +417,17 @@
     font-size: 1.8em;
   }
 
-  .game-list,
+  .game-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: auto;
+    grid-gap: 0px 23px;
+  }
+
   .new-releases,
   .more-like-this {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+      minmax(0, 1fr) 70px;
     margin: auto;
     grid-gap: 0px 23px;
   }
@@ -465,7 +500,6 @@
     max-width: 1200px;
     margin: auto;
     grid-gap: 35px;
-    padding-bottom: 80px;
   }
 
   .search-store {
@@ -482,7 +516,8 @@
   .checkout-back,
   .cta-confirm-small,
   .contact-html .search,
-  .about-html .search {
+  .about-html .search,
+  .view-more {
     display: none;
   }
 

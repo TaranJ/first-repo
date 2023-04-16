@@ -212,6 +212,10 @@ header .logo {
   padding: 10px 0px;
 }
 
+.arrow {
+  align-self: center;
+}
+
 /* --------------------------Home------------------------------ */
 .game-list,
 .new-releases,
@@ -278,6 +282,18 @@ header .logo {
   text-decoration: line-through;
 }
 
+.view-more {
+  background-color: #1d2540;
+  font-size: 1.5em;
+  padding: 10px;
+  border: solid 1px #c4c4c4;
+  align-self: stretch;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .new-releases {
   padding: 40px 0px 80px 0px;
 }
@@ -326,7 +342,6 @@ header .logo {
 /* --------------------------- Store --------------------------- */
 .trending img {
   width: 100%;
-  min-height: 100%;
 }
 
 .trending {
@@ -395,6 +410,13 @@ header .logo {
 
 .search-store img {
   padding-left: 2.5%;
+}
+
+.arrow-down {
+  max-width: 130px;
+  grid-column: span 3;
+  justify-self: center;
+  margin-top: -50px;
 }
 
 /*--------------------------- Product page ---------------------------*/
@@ -489,7 +511,6 @@ header .logo {
 
 .more-like-this img {
   width: 100%;
-  min-height: 100%;
 }
 
 /* ---------------------------Cart--------------------------- */
