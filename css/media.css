@@ -22,7 +22,9 @@
   .cart-remove,
   .cta-confirm-big,
   .checkout-back-big,
-  .arrow {
+  .arrow,
+  .cta-signup,
+  .login {
     display: none;
   }
 
@@ -55,6 +57,24 @@
     );
   }
 
+  .logo {
+    margin: 0px;
+  }
+
+  header {
+    display: grid;
+  }
+
+  .nav-right {
+    grid-area: 1/1;
+    justify-self: end;
+    z-index: 2;
+  }
+
+  .nav-main {
+    grid-area: 1/1;
+  }
+
   .game-list,
   .new-releases {
     max-width: 500px;
@@ -71,6 +91,10 @@
 
   .shopping-cart p {
     font-size: 0.9em;
+  }
+
+  .shopping-cart {
+    padding: 20px 15px;
   }
 
   .contact-info h2 {
@@ -393,6 +417,10 @@
 @media (min-width: 1040px) {
   header {
     padding-bottom: 5px;
+  }
+
+  header .logo {
+    margin-left: 50px;
   }
 
   .nav-right {

@@ -176,10 +176,6 @@ header a {
   margin-right: 100px;
 }
 
-header .logo {
-  margin-left: 50px;
-}
-
 .mobile-logo {
   grid-column: span 4;
   justify-self: center;
@@ -194,7 +190,6 @@ header .logo {
   float: right;
   margin-right: 20px;
   margin-top: 5px;
-  display: none;
 }
 
 .cart {
