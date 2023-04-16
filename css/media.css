@@ -16,7 +16,12 @@
     padding: 10px 0px;
   }
 
-  .social-media {
+  .social-media,
+  .store-nav,
+  .more-like-this,
+  .cart-remove,
+  .cta-confirm-big,
+  .checkout-back-big {
     display: none;
   }
 
@@ -24,16 +29,8 @@
     font-size: 0.8em;
   }
 
-  .store-nav {
-    display: none;
-  }
-
-  #menu-checkbox:checked ~ .store-nav {
+  #menu-checkbox:checked ~ .store-nav-hidden {
     display: block;
-  }
-
-  .more-like-this {
-    display: none;
   }
 
   .product h1,
@@ -47,10 +44,6 @@
     letter-spacing: 1px;
   }
 
-  .cart-remove {
-    display: none;
-  }
-
   .cart-html h2 {
     font-size: 1em;
     letter-spacing: 0.5px;
@@ -58,11 +51,6 @@
 
   .shopping-cart p {
     font-size: 0.9em;
-  }
-
-  .cta-confirm-big,
-  .checkout-back-big {
-    display: none;
   }
 
   .contact-info h2 {
@@ -166,6 +154,14 @@
     padding-bottom: 0px;
   }
 
+  .store-nav {
+    padding: 20px;
+  }
+
+  .store-nav h2 {
+    font-size: 1em;
+  }
+
   .store-content {
     display: grid;
     grid-template-columns: auto auto;
@@ -196,13 +192,14 @@
   }
 
   #menu-checkbox,
-  .search-store img {
+  .search-store img,
+  .more-like-this,
+  .cart-remove,
+  .cta-confirm-big,
+  .checkout-back-big {
     display: none;
   }
 
-  .more-like-this {
-    display: none;
-  }
   /* STORE */
   .product {
     display: grid;
@@ -279,10 +276,6 @@
     margin: 30px 50px;
   }
 
-  .cart-remove {
-    display: none;
-  }
-
   /* Checkout */
   .checkout {
     max-width: 600px;
@@ -292,11 +285,6 @@
 
   .checkout-back {
     margin-bottom: 50px;
-  }
-
-  .cta-confirm-big,
-  .checkout-back-big {
-    display: none;
   }
 
   /* SUCCESS */
@@ -490,7 +478,11 @@
   }
 
   #menu-checkbox,
-  .search-store img {
+  .search-store img,
+  .checkout-back,
+  .cta-confirm-small,
+  .contact-html .search,
+  .about-html .search {
     display: none;
   }
 
@@ -629,10 +621,6 @@
     height: 35px;
   }
 
-  .checkout-back {
-    display: none;
-  }
-
   .card-info {
     max-width: fit-content;
   }
@@ -652,10 +640,6 @@
 
   .checkout-back-big {
     margin: 20px 0px 0px 20px;
-  }
-
-  .cta-confirm-small {
-    display: none;
   }
 
   /* SUCCESS */
@@ -747,11 +731,6 @@
   .contact-social-media {
     grid-area: 2/2;
     align-self: center;
-  }
-
-  .contact-html .search,
-  .about-html .search {
-    display: none;
   }
 
   /* ABOUT */
