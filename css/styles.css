@@ -215,6 +215,51 @@ header .logo {
   align-self: center;
 }
 
+/* -------------------------Animations------------------------- */
+.nav-main a:hover {
+  font-weight: 600;
+}
+
+.search-list a:hover {
+  text-decoration: underline;
+}
+
+.cta:hover,
+.about-info .cta:hover {
+  background-color: #f2f2f2;
+  color: #583c6f;
+}
+
+.cta-signup:hover {
+  background-color: #583c6f;
+  color: #f2f2f2;
+}
+
+.cta-search:hover {
+  background-color: #f2f2f2;
+  color: #6375ab;
+}
+
+.login:hover {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.pricing:hover,
+.trending img:hover {
+  opacity: 0.8;
+}
+
+.arrow:hover,
+.cart-remove:hover {
+  opacity: 0.5;
+}
+
+.cart-back:hover,
+.checkout-back-big:hover {
+  color: #000;
+}
+
 /* --------------------------Home------------------------------ */
 .game-list,
 .new-releases,
@@ -475,11 +520,19 @@ header .logo {
   display: grid;
   grid-template-columns: repeat(3, 100%);
   overflow-x: scroll;
-  margin-bottom: 30px;
 }
 
 .product-images img {
   width: 100%;
+}
+
+.slide-icons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .details {

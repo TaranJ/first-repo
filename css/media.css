@@ -224,7 +224,8 @@
   .cta-confirm-big,
   .checkout-back-big,
   .cod,
-  .arrow {
+  .arrow,
+  .slide-icons {
     display: none;
   }
 
@@ -382,6 +383,10 @@
     max-width: 600px;
     margin: auto;
   }
+
+  .about-info .cta {
+    background-color: #583c6f;
+  }
 }
 
 /* ----------------------------Desktop------------------------------- */
@@ -513,7 +518,8 @@
   .cta-confirm-small,
   .contact-html .search,
   .about-html .search,
-  .view-more {
+  .view-more,
+  .slide-icons {
     display: none;
   }
 
