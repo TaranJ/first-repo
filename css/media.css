@@ -50,11 +50,7 @@
   .index-html main,
   .store-html main {
     background-image: none;
-    background: radial-gradient(
-      circle,
-      rgba(50, 56, 79, 1) 0%,
-      rgba(98, 109, 148, 1) 100%
-    );
+    background: radial-gradient(circle, rgba(50, 56, 79, 1) 0%, rgba(98, 109, 148, 1) 100%);
   }
 
   .logo {
@@ -77,11 +73,16 @@
 
   .game-list,
   .new-releases {
-    max-width: 500px;
+    width: 90%;
+    margin: auto;
   }
 
   .new-releases {
     padding: 30px 0px;
+  }
+
+  .view-more {
+    grid-row: 7;
   }
 
   .cart-html h2 {
@@ -198,6 +199,7 @@
     opacity: 0.4;
     font-size: 1.5em;
     border: none;
+    grid-area: 3/3;
   }
 
   /* STORE */

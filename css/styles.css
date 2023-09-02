@@ -208,6 +208,7 @@ header a {
 
 .arrow {
   align-self: center;
+  grid-area: 2/6;
 }
 
 /* -------------------------Animations------------------------- */
@@ -318,6 +319,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .old-price {
@@ -457,7 +459,7 @@ header a {
 
 .arrow-down {
   max-width: 130px;
-  grid-column: span 3;
+  grid-area: 5 / span 3;
   justify-self: center;
   margin-top: -50px;
 }
