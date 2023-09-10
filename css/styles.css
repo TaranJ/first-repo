@@ -413,6 +413,10 @@ header a {
 }
 
 /* --------------------------- Store --------------------------- */
+.store-content {
+  height: 100%;
+}
+
 .trending img {
   width: 100%;
 }
@@ -429,6 +433,7 @@ header a {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-column: 2;
+  max-height: 70px;
 }
 
 .cta-search {
@@ -448,6 +453,7 @@ header a {
   float: left;
   padding: 20px 20px 0px 40px;
   grid-row: 1 / span 2;
+  max-width: 300px;
 }
 
 .store-nav li,
@@ -715,6 +721,7 @@ header a {
   border-radius: 6px;
   margin-bottom: 5px;
   accent-color: #583c6f;
+  padding-left: 10px;
 }
 
 .payment-option {

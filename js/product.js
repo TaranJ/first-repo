@@ -3,6 +3,7 @@ import { displayError } from "./components/error.js";
 const product = document.querySelector(".product");
 const moreLikeThis = document.querySelector(".more-like-this");
 const productDetails = document.querySelector(".product-details");
+const title = document.querySelector("title");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -16,6 +17,8 @@ async function getGameDetails() {
   try {
     const response = await fetch(productUrl);
     const game = await response.json();
+
+    title.innerHTML += ` ${game.title}`;
 
     createHtmlDetails(game);
 
