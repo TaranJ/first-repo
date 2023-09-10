@@ -148,6 +148,7 @@ header a {
   text-transform: uppercase;
   width: 95%;
   justify-self: center;
+  padding-left: 10px;
 }
 
 .cta {
@@ -211,7 +212,34 @@ header a {
   grid-area: 2/6;
 }
 
+.error {
+  border: 2px solid #a10202;
+  padding: 1rem;
+  color: #a10202;
+  background: rgba(255, 255, 255, 0.6);
+  grid-column: span 2;
+  font-weight: 600;
+}
+
 /* -------------------------Animations------------------------- */
+.loader {
+  border: 7px solid #f3f3f3;
+  border-top: 7px solid #583c6f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .nav-main a:hover {
   font-weight: 600;
 }

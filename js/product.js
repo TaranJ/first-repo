@@ -1,3 +1,5 @@
+import { displayError } from "./components/error.js";
+
 const product = document.querySelector(".product");
 const moreLikeThis = document.querySelector(".more-like-this");
 const productDetails = document.querySelector(".product-details");
@@ -9,21 +11,21 @@ const id = params.get("id");
 const url = "https://api.noroff.dev/api/v1/gamehub/";
 const productUrl = url + id;
 
-console.log(url);
-
 // fetches game details
 async function getGameDetails() {
-  const response = await fetch(productUrl);
-  const game = await response.json();
+  try {
+    const response = await fetch(productUrl);
+    const game = await response.json();
 
-  console.log(game);
+    createHtmlDetails(game);
 
-  createHtmlDetails(game);
-
-  if (game.onSale === true) {
-    createHtmlSale(game);
-  } else {
-    createHtml(game);
+    if (game.onSale === true) {
+      createHtmlSale(game);
+    } else {
+      createHtml(game);
+    }
+  } catch (error) {
+    product.innerHTML = displayError("An error occurred when calling the API");
   }
 }
 
@@ -78,19 +80,25 @@ function createHtmlDetails(game) {
 
 // fetches images for "More like this"-section, and skips the current game
 async function getGameImages() {
-  const response = await fetch(url);
-  const games = await response.json();
+  try {
+    const response = await fetch(url);
+    const games = await response.json();
 
-  for (let i = 0; i < games.length; i++) {
-    if (id === games[i].id) {
-      continue;
+    moreLikeThis.innerHTML = `<h1>More like this</h1>`;
+
+    for (let i = 0; i < games.length; i++) {
+      if (id === games[i].id) {
+        continue;
+      }
+
+      if (i === 5 || i === 6) {
+        break;
+      }
+
+      moreLikeThis.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}">`;
     }
-
-    if (i === 5) {
-      break;
-    }
-
-    moreLikeThis.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}">`;
+  } catch (error) {
+    moreLikeThis.innerHTML = displayError("An error occurred when calling the API");
   }
 }
 
