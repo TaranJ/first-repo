@@ -42,8 +42,8 @@ function createHtmlSale(game) {
                         <p class="da-description">${game.description}</p>
                         <div class="product-price">
                         <p class="sale">Sale</p>
-                        <p class="old-price">${game.price}</p>
-                        <p class="sale-price">${game.discountedPrice}</p>
+                        <p class="old-price">€${game.price}</p>
+                        <p class="sale-price">€${game.discountedPrice}</p>
                         <a href="cart.html" class="cta">Buy Now</a></div>
                         </div>`;
 }
