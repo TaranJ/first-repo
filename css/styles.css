@@ -35,6 +35,22 @@ footer {
   gap: 0px;
 }
 
+.footer-text {
+  display: inline-flex;
+}
+
+.footer-text p {
+  margin: 0px;
+}
+
+.footer-text a {
+  color: #000;
+}
+
+.footer-space {
+  padding-right: 2px;
+}
+
 footer .logo {
   max-width: 70px;
   margin: 0px;
@@ -42,7 +58,7 @@ footer .logo {
 }
 
 .copyright {
-  padding: 0px;
+  padding-bottom: 10px;
   line-height: 4pt;
   grid-column: 4;
 }

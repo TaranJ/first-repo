@@ -415,6 +415,18 @@
   }
 }
 
+/* ----------------------------Wide tablet------------------------------- */
+
+@media (min-width: 1040px) and (max-width: 1360px) {
+  .game-list {
+    padding: 80px 20px;
+  }
+
+  .new-releases {
+    padding: 80px 20px 200px 20px;
+  }
+}
+
 /* ----------------------------Desktop------------------------------- */
 @media (min-width: 1040px) {
   header {
@@ -464,10 +476,6 @@
   }
 
   /* HOME */
-  .game-list {
-    padding: 80px 0px;
-  }
-
   .pricing {
     font-size: 1em;
   }
@@ -475,10 +483,6 @@
   .game-list h1,
   .new-releases h1 {
     margin: 24px 0px;
-  }
-
-  .new-releases {
-    padding: 80px 0px 200px 0px;
   }
 
   .sell-games {
@@ -845,5 +849,15 @@
 @media (min-width: 1040px) and (max-width: 1240px) {
   .pricing {
     font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1361px) {
+  .game-list {
+    padding: 80px 0px;
+  }
+
+  .new-releases {
+    padding: 80px 0px 200px 0px;
   }
 }
