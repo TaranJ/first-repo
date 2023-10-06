@@ -13,10 +13,11 @@ const url = "https://api.noroff.dev/api/v1/gamehub/";
 const productUrl = url + id;
 
 // fetches game details
-async function getGameDetails() {
+export async function getGameDetails() {
   try {
     const response = await fetch(productUrl);
     const game = await response.json();
+    console.log(game);
 
     title.innerHTML += ` ${game.title}`;
 
@@ -30,6 +31,53 @@ async function getGameDetails() {
   } catch (error) {
     product.innerHTML = displayError("An error occurred when calling the API");
   }
+
+  // Shopping cart
+  function save(key, value) {
+    const encodedValue = JSON.stringify(value);
+    localStorage.setItem(key, encodedValue);
+  }
+
+  function load(key) {
+    const encodedValue = localStorage.getItem(key);
+    return JSON.parse(encodedValue);
+  }
+
+  function onAddToCart(event) {
+    const button = event.target;
+    const id = button.dataset.id;
+    const title = button.dataset.title;
+    const price = button.dataset.price;
+    const image = button.dataset.img;
+
+    let cart = load("cart") || [];
+
+    const itemInCart = cart.find((item) => item.id === id);
+
+    if (itemInCart) {
+      itemInCart.quantity++;
+    } else {
+      cart.push({
+        id,
+        title,
+        price,
+        image,
+        quantity: 1,
+      });
+    }
+
+    save("cart", cart);
+  }
+
+  function AddToCart() {
+    const buttons = document.querySelectorAll("button[data-id]");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", onAddToCart);
+    });
+  }
+
+  AddToCart();
 }
 
 getGameDetails();
@@ -44,7 +92,7 @@ function createHtmlSale(game) {
                         <p class="sale">Sale</p>
                         <p class="old-price">€${game.price}</p>
                         <p class="sale-price">€${game.discountedPrice}</p>
-                        <a href="cart.html" class="cta">Buy Now</a></div>
+                        <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.title}" data-price="${game.discountedPrice}" data-img="${game.image}" class="cta">Buy Now</button></a></div>
                         </div>`;
 }
 
@@ -54,8 +102,8 @@ function createHtml(game) {
                           <h1>${game.title}</h1>
                           <p class="da-description">${game.description}</p>
                           <div class="product-price">
-                          <p class="sale-price">${game.price}</p>
-                          <a href="cart.html" class="cta">Buy Now</a></div>
+                          <p class="sale-price">€${game.price}</p>
+                          <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.title}" data-price="${game.price}" data-img="${game.image}" class="cta">Buy Now</button></a></div>
                           </div>`;
 }
 
