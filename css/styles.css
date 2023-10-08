@@ -640,14 +640,12 @@ header a {
 }
 
 .shopping-cart img {
-  grid-row: 2;
   max-width: 140px;
 }
 
 .cart-title,
 .cart-price,
 .cart-price p {
-  grid-row: 3;
   margin-top: 0px;
 }
 
@@ -679,9 +677,25 @@ header a {
 }
 
 .cart-remove {
-  text-align: right;
   text-decoration: underline;
   font-size: 0.8em;
+  color: #a10202;
+}
+
+.games-in-cart,
+.summary-games {
+  grid-column: span 3;
+}
+
+.cart-item,
+.order-item {
+  display: grid;
+  grid-template-columns: max(180px) auto;
+  padding: 10px;
+}
+
+.cart-total-price {
+  justify-self: end;
 }
 
 /* ---------------------------Checkout--------------------------- */
@@ -861,9 +875,6 @@ header a {
 
 .order-summary img {
   max-width: 130px;
-  grid-column: span 2;
-  justify-self: center;
-  margin-bottom: 10px;
 }
 
 .order-summary .cart-price,

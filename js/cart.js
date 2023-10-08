@@ -1,7 +1,10 @@
-const url = "https://api.noroff.dev/api/v1/gamehub/";
+function remove(key, value) {
+  localStorage.removeItem(key, JSON.stringify(value));
+}
 
-function remove(key) {
-  localStorage.removeItem(key);
+function load(key) {
+  const encodedValue = localStorage.getItem(key);
+  return JSON.parse(encodedValue);
 }
 
 function calculateTotal() {
@@ -15,22 +18,37 @@ function calculateTotal() {
 const shoppingCart = document.querySelector(".games-in-cart");
 const totalPrice = document.querySelector(".cart-total-price");
 
-function test() {
+function displayCart() {
   const gameData = JSON.parse(localStorage.getItem("cart"));
   for (let i = 0; i < gameData.length; i++) {
     shoppingCart.innerHTML += `
-    <img src="${gameData[i].image}" class="cart-img" />
+    <div class="cart-item"><img src="${gameData[i].image}" class="cart-img" />
     <p class="cart-title">${gameData[i].title}</p>
     <div class="cart-price">
-      <p>${gameData[i].price}</p>
-      <p class="cart-remove">Remove</p>
+      <p>€${gameData[i].price}</p>
+      <p class="cart-remove" data-id="${gameData[i].id}">Remove</p>
     </div>
     `;
-
-    totalPrice.innerHTML += `${gameData[i].price}`;
   }
 
-  console.log(userData);
+  function onRemoveFromCart(event) {
+    remove("cart");
+
+    location.reload();
+  }
+
+  function RemoveFromCart() {
+    const buttons = document.querySelectorAll(".cart-remove");
+    console.log(gameData);
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", onRemoveFromCart);
+    });
+  }
+
+  RemoveFromCart();
 }
 
-test();
+totalPrice.innerHTML = "€" + calculateTotal().toFixed(2);
+
+displayCart();
