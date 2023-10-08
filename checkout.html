@@ -69,6 +69,7 @@
               id="first-name"
               class="form-input"
             />
+            <div class="form-error" id="firstNameError">Please enter your first name</div>
             <label for="last-name">Last name:</label>
             <input
               type="text"
@@ -76,8 +77,10 @@
               id="last-name"
               class="form-input"
             />
+            <div class="form-error" id="lastNameError">Please enter your last name</div>
             <label for="adress">Adress:</label>
             <input type="text" name="adress" id="adress" class="form-input" />
+            <div class="form-error" id="adressError">Your adress must be at least 4 characters</div>
             <label for="postal-code">Postal code/city:</label>
             <input
               type="text"
@@ -85,8 +88,10 @@
               id="postal-code"
               class="form-input"
             />
+            <div class="form-error" id="postalCodeError">Please enter your postal code and location</div>
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" class="form-input" />
+            <div class="form-error" id="emailError">Please enter a valid email address</div>
           </fieldset>
           <fieldset>
             <legend>Payment information:</legend>
@@ -104,7 +109,9 @@
               <label for="vipps">Vipps</label>
               <input type="radio" id="paypal" name="payment" value="paypal" />
               <label for="paypal">Paypal</label>
+              <div class="form-error" id="paymentError">Please choose a payment method</div>
             </div>
+            <div class="card-payment">
             <label for="card-holder">Card holders name:</label>
             <input
               type="text"
@@ -112,6 +119,7 @@
               id="card-holder"
               class="form-input"
             />
+            <div class="form-error" id="cardHolderError">The name must contain at least four characters</div>
             <label for="card-number">Card number:</label>
             <input
               type="number"
@@ -119,6 +127,7 @@
               id="card-number"
               class="form-input"
             />
+            <div class="form-error" id="cardNumberError">This field must contain 16 digits</div>
             <div class="card-info">
               <div>
                 <label for="expiration">Expiration mm/yy:</label>
@@ -128,14 +137,17 @@
                   id="expiration"
                   class="form-input"
                 />
+                <div class="form-error" id="expirationError">This field must contain 4 digits</div>
               </div>
               <div>
                 <label for="ccv">CCV/CVC:</label>
                 <input type="number" name="ccv" id="ccv" class="form-input" />
+                <div class="form-error" id="ccvError">This field must contain 3 digits</div>
+              </div>
               </div>
             </div>
           </fieldset>
-          <a href="success.html" class="cta cta-confirm-big">Confirm Order</a>
+          <button class="cta cta-confirm-big">Confirm Order</button>
         </form>
         <div class="order">
           <div class="games-in-order"></div>
@@ -156,7 +168,7 @@
           <a href="cart.html" class="checkout-back-big">Edit cart</a>
         </div>
         <a href="cart.html" class="checkout-back">Edit cart</a>
-        <a href="success.html" class="cta cta-confirm-small">Confirm Order</a>
+        <button class="cta cta-confirm-small">Confirm Order</button>
       </section>
     </main>
     <footer>

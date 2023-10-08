@@ -518,6 +518,7 @@ header a {
 
 .product img {
   max-width: 100%;
+  height: 100%;
 }
 
 .product-photo {
@@ -839,6 +840,21 @@ header a {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.9em;
+}
+
+.card-payment {
+  display: none;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.payment-option .form-error {
+  grid-column: span 2;
 }
 
 /* ---------------------------Success--------------------------- */
