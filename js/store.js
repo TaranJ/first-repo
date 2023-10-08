@@ -18,7 +18,7 @@ async function getGameImagesStore() {
         break;
       }
 
-      trending.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}">`;
+      trending.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="${games[i].title}">`;
     }
   } catch (error) {
     trending.innerHTML = displayError("An error occurred when calling the API");

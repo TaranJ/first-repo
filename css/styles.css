@@ -142,6 +142,8 @@ header a {
 }
 
 .search a,
+.search label,
+.search-store label,
 .store-nav-hidden,
 #menu-checkbox {
   display: none;

@@ -23,7 +23,7 @@ function displayOrderSummary() {
   const gameData = JSON.parse(localStorage.getItem("cart"));
   for (let i = 0; i < gameData.length; i++) {
     summaryGames.innerHTML += `<div class="order-item">
-                                <img src="${gameData[i].image}"/>
+                                <img src="${gameData[i].image}" alt="game cover"/>
                                 <p class="cart-title">${gameData[i].title}</p>
                                 <p class="cart-price">€${gameData[i].price}</p></div>`;
   }

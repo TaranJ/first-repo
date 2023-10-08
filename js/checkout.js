@@ -24,7 +24,7 @@ function displayOrderSummary() {
   const gameData = JSON.parse(localStorage.getItem("cart"));
   for (let i = 0; i < gameData.length; i++) {
     gamesInOrder.innerHTML += `<div class="order-item">
-                        <img src="${gameData[i].image}" />
+                        <img src="${gameData[i].image}" alt="game cover" />
                         <div class="order-info">
                             <p>${gameData[i].title}</p>
                             <p>€${gameData[i].price}</p>
@@ -149,17 +149,6 @@ function validateForm(event) {
 
 form.addEventListener("submit", validateForm);
 confirmButton.addEventListener("click", validateForm);
-visaButton.addEventListener("click", displayCardPayment);
-vippsButton.addEventListener("click", hideCardPayment);
-paypalButton.addEventListener("click", hideCardPayment);
-
-function displayCardPayment() {
-  cardPayment.style.display = "block";
-}
-
-function hideCardPayment() {
-  cardPayment.style.display = "none";
-}
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -186,4 +175,16 @@ function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
+}
+
+visaButton.addEventListener("click", displayCardPayment);
+vippsButton.addEventListener("click", hideCardPayment);
+paypalButton.addEventListener("click", hideCardPayment);
+
+function displayCardPayment() {
+  cardPayment.style.display = "block";
+}
+
+function hideCardPayment() {
+  cardPayment.style.display = "none";
 }

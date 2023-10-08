@@ -22,7 +22,7 @@ function displayCart() {
   const gameData = JSON.parse(localStorage.getItem("cart"));
   for (let i = 0; i < gameData.length; i++) {
     shoppingCart.innerHTML += `
-    <div class="cart-item"><img src="${gameData[i].image}" class="cart-img" />
+    <div class="cart-item"><img src="${gameData[i].image}" alt="game cover" class="cart-img" />
     <p class="cart-title">${gameData[i].title}</p>
     <div class="cart-price">
       <p>€${gameData[i].price}</p>

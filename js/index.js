@@ -22,7 +22,7 @@ async function getGamesOnSale() {
         break;
       }
 
-      specialOffers.innerHTML += ` <div class="pricing"><a href="product.html?id=${games[i].id}"><img src="${games[i].image}"></a>
+      specialOffers.innerHTML += ` <div class="pricing"><a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="cover of ${games[i].title}"></a>
                                 <p class="sale">Sale</p>
                                 <p class="old-price">€${games[i].price}</p>
                                 <p class="sale-price">€${games[i].discountedPrice}</p></div>`;
@@ -45,7 +45,7 @@ async function getGameImagesHome() {
       break;
     }
 
-    newReleases.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}">`;
+    newReleases.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="cover of ${games[i].title}">`;
   }
 }
 
