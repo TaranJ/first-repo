@@ -9,7 +9,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const url = "https://api.noroff.dev/api/v1/gamehub/";
+const url = "http://gamehub.local/wp-json/wc/store/products/";
 const productUrl = url + id;
 
 // fetches game details
@@ -19,11 +19,11 @@ export async function getGameDetails() {
     const game = await response.json();
     console.log(game);
 
-    title.innerHTML += ` ${game.title}`;
+    title.innerHTML += ` ${game.name}`;
 
     createHtmlDetails(game);
 
-    if (game.onSale === true) {
+    if (game.on_sale === true) {
       createHtmlSale(game);
     } else {
       createHtml(game);
@@ -84,26 +84,26 @@ getGameDetails();
 
 // 3 functions that are called in getGameDetails, the first one is only called if the game is on sale
 function createHtmlSale(game) {
-  product.innerHTML = `<div class="product-photo"> <img src="${game.image}" /> </div>
+  product.innerHTML = `<div class="product-photo"> <img src="${game.images[0].src}" /> </div>
                         <div class="product-description">
-                        <h1>${game.title}</h1>
+                        <h1>${game.name}</h1>
                         <p class="da-description">${game.description}</p>
                         <div class="product-price">
                         <p class="sale">Sale</p>
-                        <p class="old-price">€${game.price}</p>
-                        <p class="sale-price">€${game.discountedPrice}</p>
-                        <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.title}" data-price="${game.discountedPrice}" data-img="${game.image}" class="cta">Buy Now</button></a></div>
+                        <p class="old-price">€${game.prices.regular_price}</p>
+                        <p class="sale-price">€${game.prices.price}</p>
+                        <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.name}" data-price="${game.prices.price}" data-img="${game.images[0].src}" class="cta">Buy Now</button></a></div>
                         </div>`;
 }
 
 function createHtml(game) {
-  product.innerHTML = `<div class="product-photo"> <img src="${game.image}" /> </div>
+  product.innerHTML = `<div class="product-photo"> <img src="${game.images[0].src}" /> </div>
                           <div class="product-description">
-                          <h1>${game.title}</h1>
+                          <h1>${game.name}</h1>
                           <p class="da-description">${game.description}</p>
                           <div class="product-price">
-                          <p class="sale-price">€${game.price}</p>
-                          <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.title}" data-price="${game.price}" data-img="${game.image}" class="cta">Buy Now</button></a></div>
+                          <p class="sale-price">€${game.prices.price}</p>
+                          <a href="/cart.html"> <button data-id="${game.id}" data-title="${game.name}" data-price="${game.prices.price}" data-img="${game.images[0].src}" class="cta">Buy Now</button></a></div>
                           </div>`;
 }
 
@@ -112,15 +112,15 @@ function createHtmlDetails(game) {
     <table>
       <tr>
         <th>Release year:</th>
-        <td>${game.released}</td>
+        <td>${game.attributes[1].terms[0].name}</td>
       </tr>
       <tr>
         <th>Genre:</th>
-        <td>${game.genre}</td>
+        <td>${game.categories[0].name}</td>
       </tr>
       <tr>
         <th>Rating:</th>
-        <td>${game.ageRating}</td>
+        <td>${game.attributes[0].terms[0].name}</td>
       </tr>
       <tr>
         <th>Reviews:</th>
@@ -146,7 +146,7 @@ async function getGameImages() {
         break;
       }
 
-      moreLikeThis.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}">`;
+      moreLikeThis.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].images[0].src}">`;
     }
   } catch (error) {
     moreLikeThis.innerHTML = displayError("An error occurred when calling the API");

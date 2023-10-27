@@ -1,6 +1,6 @@
 import { displayError } from "./components/error.js";
 
-const url = "https://api.noroff.dev/api/v1/gamehub/";
+const url = "http://gamehub.local/wp-json/wc/store/products";
 
 const newReleases = document.querySelector(".new-releases");
 const specialOffers = document.querySelector(".game-list");
@@ -11,21 +11,23 @@ async function getGamesOnSale() {
     const response = await fetch(url);
     const games = await response.json();
 
+    console.log(games);
+
     specialOffers.innerHTML = `<h1>Special offers</h1>
                               <div class="view-more">View more</div>`;
 
     for (let i = 0; i < games.length; i++) {
-      if (games[i].onSale === false) {
+      if (games[i].on_sale === false) {
         continue;
       }
       if (i === 8) {
         break;
       }
 
-      specialOffers.innerHTML += ` <div class="pricing"><a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="cover of ${games[i].title}"></a>
+      specialOffers.innerHTML += ` <div class="pricing"><a href="product.html?id=${games[i].id}"><img src="${games[i].images[0].src}" alt="cover of ${games[i].name}"></a>
                                 <p class="sale">Sale</p>
-                                <p class="old-price">€${games[i].price}</p>
-                                <p class="sale-price">€${games[i].discountedPrice}</p></div>`;
+                                <p class="old-price">€${games[i].prices.regular_price}</p>
+                                <p class="sale-price">€${games[i].prices.price}</p></div>`;
     }
   } catch (error) {
     specialOffers.innerHTML = displayError("An error occurred when calling the API");
@@ -45,7 +47,7 @@ async function getGameImagesHome() {
       break;
     }
 
-    newReleases.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="cover of ${games[i].title}">`;
+    newReleases.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].images[0].src}" alt="cover of ${games[i].name}">`;
   }
 }
 

@@ -1,6 +1,6 @@
 import { displayError } from "./components/error.js";
 
-const url = "https://api.noroff.dev/api/v1/gamehub/";
+const url = "http://gamehub.local/wp-json/wc/store/products/";
 
 const trending = document.querySelector(".trending");
 
@@ -18,7 +18,7 @@ async function getGameImagesStore() {
         break;
       }
 
-      trending.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].image}" alt="${games[i].title}">`;
+      trending.innerHTML += `<a href="product.html?id=${games[i].id}"><img src="${games[i].images[0].src}" alt="${games[i].name}">`;
     }
   } catch (error) {
     trending.innerHTML = displayError("An error occurred when calling the API");
