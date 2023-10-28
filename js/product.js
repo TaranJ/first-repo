@@ -9,7 +9,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const url = "http://gamehub.local/wp-json/wc/store/products/";
+const url = "https://www.taranj.no/wp-json/wc/store/products/";
 const productUrl = url + id;
 
 // fetches game details

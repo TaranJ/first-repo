@@ -1,6 +1,6 @@
 import { displayError } from "./components/error.js";
 
-const url = "http://gamehub.local/wp-json/wc/store/products";
+const url = "https://www.taranj.no/wp-json/wc/store/products";
 
 const newReleases = document.querySelector(".new-releases");
 const specialOffers = document.querySelector(".game-list");
