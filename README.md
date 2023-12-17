@@ -14,8 +14,8 @@ The website includes these pages:
 
 - Home
 - List of games
-- A games page showing the product detials
-- Checkout page
+- A games page showing the product details
+- Checkout page with shopping cart functionality
 - Checkout success
 - About
 - Contact
@@ -30,46 +30,26 @@ The website includes these pages:
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
+Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
+git clone git@github.com:TaranJ/html-css-course-assignment.git
 ```
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+1. Open the repo in Visual Studio Code or another code editor
+2. Install a live server extension
+3. Right click one of the html-files and choose "Open with Live Server"
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+My email: taran.91@hotmail.com
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+To complete this project I've received valuable help from:
+
+- My course content and teachers at Noroff
+- My peers who gave me feedback on the project
+- The participants of the usability tests
