@@ -2,22 +2,29 @@
 
 ![image](https://portfolio-tjohannessen.netlify.app/images/gamehub.jpg)
 
-A simple overview of the use/purpose of the project.
+GameHub is an online shop where users can purchase computer games.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This is a website for an imagined gaming marketplace that lets you buy tons of video games online for any device. Designing and creating it was part of my front-end course at Noroff School of technology and digital media.
 
-You can add some bullet points if you'd like to:
+The target audience is aged 18 to 25 and are interested in computer games. They would would either like to purchase games or would like to sell games they have finished playing.
 
-- List item 1
-- List item 2
-- List item 3
+The website includes these pages:
+
+- Home
+- List of games
+- A games page showing the product detials
+- Checkout page
+- Checkout success
+- About
+- Contact
 
 ## Built With
 
 - HTML
 - CSS
+- JavaScript
 
 ## Getting Started
 
