@@ -20,6 +20,8 @@ The website includes these pages:
 - About
 - Contact
 
+The product content is stored on a headless WordPress installation with the Woo Commerce plugin, and is fetched through WordPress REST API.
+
 ## Built With
 
 - HTML
